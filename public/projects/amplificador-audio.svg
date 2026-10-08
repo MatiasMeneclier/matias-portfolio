@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#132032"/><stop offset="1" stop-color="#071016"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#edb965" stop-opacity=".2"/><stop offset="1" stop-color="#edb965" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#d2e5eb" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/><rect width="1200" height="800" fill="url(#grid)"/><ellipse cx="600" cy="400" rx="480" ry="370" fill="url(#glow)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 345h30q20-100 40 0t40 0t40 0h115M100 455h35q15-45 30 0t30 0t30 0h140" stroke="#a8c6d0" stroke-width="4"/>
+    <path d="M365 305v190l185-95z" fill="#edb965" fill-opacity=".06" stroke="#edb965" stroke-width="4"/>
+    <path d="M550 400h120m0 0q15-100 30 0t30 0t30 0h40" stroke="#edb965" stroke-width="5"/>
+    <path d="M800 355h45l65-55v200l-65-55h-45z" fill="#edb965" fill-opacity=".08" stroke="#edb965" stroke-width="4"/>
+    <path d="M942 345q50 55 0 110m30-145q85 90 0 180m30-215q125 125 0 250" stroke="#edb965" stroke-opacity=".6" stroke-width="3"/>
+    <path d="M388 350h20m-10-10v20m-10 90h20" stroke="#a8c6d0" stroke-width="3"/>
+  </g>
+  <g font-family="Arial,sans-serif" fill="#c9d7de"><text x="100" y="115" font-size="17" letter-spacing="5">ANALOG AUDIO</text></g>
+</svg>

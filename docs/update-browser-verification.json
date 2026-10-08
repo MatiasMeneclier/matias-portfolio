@@ -1,0 +1,18 @@
+{
+  "checked": [
+    "Soft default, sun/moon/globe icons and persisted preferences",
+    "Soft header integrated into hero and available after scrolling",
+    "bilingual sections/terminal/CV/project details",
+    "admin copy editing",
+    "photo framing and preview",
+    "company logo/image preview and reuse",
+    "disabled themes",
+    "360/390/768px no overflow",
+    "anonymous edit controls hidden",
+    "both themes reversible 3D and usable final hero",
+    "hero name stays in place and hidden until the final crossfade",
+    "language change during the intro preserves scroll phase",
+    "laptop click plays a fast continuous intro from lid/screen/keyboard; background does not; keyboard skip and final hero remain usable"
+  ],
+  "browserErrors": []
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Navegador GPS con brújula solar</title>
+  <desc>Ilustración conceptual de una brújula orientada mediante una referencia solar. No es una fotografía del prototipo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="100" y1="0" x2="1100" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#302c31"/><stop offset="1" stop-color="#121d2a"/></linearGradient>
+    <radialGradient id="sunlight"><stop stop-color="#ffca75" stop-opacity=".3"/><stop offset="1" stop-color="#ffca75" stop-opacity="0"/></radialGradient>
+    <linearGradient id="rim" x1="400" y1="200" x2="800" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#fae3b2"/><stop offset="1" stop-color="#78676e"/></linearGradient>
+  </defs>
+  <path d="M0 0h1200v750H0z" fill="url(#bg)"/>
+  <circle cx="910" cy="178" r="320" fill="url(#sunlight)"/>
+  <g stroke="#ead9bb" stroke-opacity=".09" stroke-width="1.5">
+    <path d="M0 510c170-130 220-90 360-30s285 95 435-40 290-165 405-83M0 550c175-125 238-90 365-28s283 90 447-44 275-158 388-82M0 590c168-118 251-87 368-28s296 87 453-40 265-149 379-82M0 630c169-120 252-91 377-31s296 78 451-37 262-147 372-77"/>
+  </g>
+  <path d="M620 353 910 178" stroke="#f3c478" stroke-opacity=".4" stroke-width="2" stroke-dasharray="5 10"/>
+  <circle cx="600" cy="385" r="225" stroke="#d9ccb8" stroke-opacity=".08"/>
+  <circle cx="600" cy="385" r="195" fill="#d5dfeb" fill-opacity=".025" stroke="url(#rim)" stroke-width="2"/>
+  <circle cx="600" cy="385" r="177" stroke="#e3d8c5" stroke-opacity=".19" stroke-dasharray="2 15" stroke-width="8"/>
+  <circle cx="600" cy="385" r="148" stroke="#e3d8c5" stroke-opacity=".1"/>
+  <g fill="#dacdb8" font-family="Arial, sans-serif" font-size="20" text-anchor="middle"><text x="600" y="246">N</text><text x="749" y="392">E</text><text x="600" y="536">S</text><text x="450" y="392">W</text></g>
+  <path d="m600 385 52-115-10 145Z" fill="#ffd692"/>
+  <path d="m600 385-52 115 10-145Z" fill="#a5b4c8" fill-opacity=".5"/>
+  <circle cx="600" cy="385" r="13" fill="#182230" stroke="#f5d7a3" stroke-width="3"/>
+  <g stroke="#ffda93" stroke-width="3" stroke-linecap="round">
+    <circle cx="910" cy="178" r="27" fill="#ffda93" fill-opacity=".18"/>
+    <path d="M910 133v-14m0 104v14m-45-59h-14m104 0h14m-91-32-10-10m74 74 10 10m-10-84-10 10m-54 54-10 10"/>
+  </g>
+  <text x="140" y="112" fill="#cbbfaf" font-family="Arial, sans-serif" font-size="16" letter-spacing="4">GPS / IMU / SOLAR</text>
+</svg>

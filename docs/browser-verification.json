@@ -1,0 +1,18 @@
+{
+  "checked": [
+    "navigation",
+    "terminal",
+    "protected routes",
+    "contact unavailable",
+    "project create/edit/detail/hide/delete",
+    "safe SVG upload/reuse/replace",
+    "gallery",
+    "persistent keyboard reorder",
+    "appearance and custom colors",
+    "navigation visibility",
+    "mobile public and admin",
+    "reduced motion",
+    "reversible 3D scrub and entry"
+  ],
+  "browserErrors": []
+}

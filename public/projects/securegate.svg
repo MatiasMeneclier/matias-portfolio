@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>secureGate — control de acceso</title>
+  <desc>Ilustración conceptual de reconocimiento facial, acceso RFID y administración web. No es una captura del prototipo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="60" y1="30" x2="1090" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152d40"/><stop offset=".5" stop-color="#0b202c"/><stop offset="1" stop-color="#0d1724"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop stop-color="#65dfce" stop-opacity=".22"/><stop offset="1" stop-color="#65dfce" stop-opacity="0"/></radialGradient>
+    <linearGradient id="shield" x1="466" y1="175" x2="770" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a4f7e4" stop-opacity=".19"/><stop offset="1" stop-color="#56c6d8" stop-opacity=".03"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="480" y1="180" x2="740" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b3fff0"/><stop offset=".55" stop-color="#65cdbf"/><stop offset="1" stop-color="#458cb0"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" stroke="#b1e4e7" stroke-opacity=".035"/></pattern>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v750H0z"/>
+  <path fill="url(#grid)" d="M0 0h1200v750H0z"/>
+  <ellipse cx="600" cy="330" rx="480" ry="380" fill="url(#glow)"/>
+  <g stroke="#71c6c0" stroke-opacity=".15">
+    <circle cx="600" cy="338" r="247"/><circle cx="600" cy="338" r="281" stroke-dasharray="3 15"/>
+    <path d="M90 338h232m556 0h232M600 58v34m0 492v38"/>
+  </g>
+  <path d="M600 164c-56 38-107 54-155 63v122c0 81 51 143 155 193 104-50 155-112 155-193V227c-48-9-99-25-155-63Z" fill="url(#shield)" stroke="url(#edge)" stroke-width="2.5"/>
+  <path d="M600 184c-48 30-92 45-135 56v109c0 70 43 123 135 171 92-48 135-101 135-171V240c-43-11-87-26-135-56Z" stroke="#c9fff4" stroke-opacity=".12"/>
+  <g stroke="#c9fff4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="553" y="321" width="94" height="81" rx="18" fill="#7ee2cf" fill-opacity=".08"/>
+    <path d="M572 321v-25a28 28 0 0 1 56 0v25"/>
+    <circle cx="600" cy="356" r="7" fill="#c9fff4" stroke="none"/>
+    <path d="M600 362v14"/>
+  </g>
+  <g fill="#132e3b" stroke="#99e5da" stroke-opacity=".25">
+    <rect x="233" y="280" width="116" height="116" rx="30"/>
+    <rect x="851" y="280" width="116" height="116" rx="30"/>
+  </g>
+  <g stroke="#a4efdf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M265 322v-9h9m34 0h9v9m0 34v9h-9m-34 0h-9v-9"/>
+    <path d="M282 332v3m18-3v3m-18 14q9 9 18 0"/>
+    <rect x="878" y="317" width="62" height="42" rx="7"/>
+    <path d="M895 373h28m-14-14v14m-20-45h40"/>
+  </g>
+  <g fill="#a4efdf"><circle cx="365" cy="338" r="4"/><circle cx="835" cy="338" r="4"/><circle cx="600" cy="579" r="4"/></g>
+  <g font-family="Arial, sans-serif" font-size="15" letter-spacing="3" text-anchor="middle" fill="#b2ddd8">
+    <text x="291" y="435">FACE</text><text x="909" y="435">WEB</text>
+  </g>
+  <rect x="531" y="606" width="138" height="52" rx="26" fill="#102d37" stroke="#91dfd3" stroke-opacity=".28"/>
+  <g stroke="#a4efdf" stroke-width="2.5" stroke-linecap="round">
+    <path d="M559 625v14m6-17q9 10 0 20m6-24q15 14 0 28"/>
+  </g>
+  <text x="595" y="638" fill="#c9ebe5" font-family="Arial, sans-serif" font-size="16" letter-spacing="2">RFID</text>
+</svg>

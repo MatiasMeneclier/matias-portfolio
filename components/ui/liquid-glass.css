@@ -1,0 +1,232 @@
+.site {
+  --liquid-tint: color-mix(in srgb, var(--surface) 5%, transparent);
+  --liquid-highlight: #fffffff2;
+  --liquid-rim: #ffffff80;
+  --liquid-shade: #252a3930;
+  --liquid-glow: #ffffff1c;
+  --liquid-edge: color-mix(in srgb, var(--text) 18%, transparent);
+  --liquid-inner-shade: color-mix(in srgb, var(--text) 18%, transparent);
+}
+.site[data-theme="dark"] {
+  --liquid-tint: color-mix(in srgb, var(--surface) 8%, transparent);
+  --liquid-highlight: #ffffffa6;
+  --liquid-rim: #ffffff4d;
+  --liquid-shade: #00000066;
+  --liquid-glow: #b7d9ff0f;
+  --liquid-edge: #ffffff33;
+  --liquid-inner-shade: #00000066;
+}
+.liquid-glass-defs {
+  position: absolute;
+  pointer-events: none;
+}
+.portfolio-nav-floating {
+  visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* The global short transition duration must not animate inherited visibility
+     one descendant per frame after the shared controls have already hidden. */
+  .portfolio-nav-floating,
+  .portfolio-nav-floating *,
+  .flower-menu,
+  .flower-menu * {
+    transition-property: none;
+  }
+}
+.liquid-glass-layer {
+  --liquid-softness: 1.5px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 16% 0%, var(--liquid-glow), transparent 62%),
+    linear-gradient(145deg, #ffffff0c, transparent 45%, #ffffff05),
+    var(--liquid-tint);
+  border: 1px solid var(--liquid-edge);
+  -webkit-backdrop-filter: blur(2px) saturate(160%);
+  backdrop-filter: blur(2px) saturate(160%);
+  box-shadow:
+    inset 0 1px 1px var(--liquid-highlight),
+    inset 1px 0 2px var(--liquid-rim),
+    inset -1px -1px 1px var(--liquid-rim),
+    inset 0 -3px 6px -3px var(--liquid-inner-shade),
+    inset 0 0 6px 1px var(--liquid-glow),
+    0 5px 14px -3px var(--liquid-shade);
+}
+/* One backdrop pass across the entire lens. A second frosted layer would
+   obscure the refraction. The rim below adds only reflected light. */
+@supports (backdrop-filter: url("#lens")) {
+  .site .liquid-glass-layer {
+    backdrop-filter: var(--liquid-refraction, blur(2px))
+      blur(var(--liquid-softness)) saturate(160%) brightness(1.03);
+  }
+}
+.liquid-glass-edge {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  padding: 1.5px;
+  background: conic-gradient(
+    from -40deg,
+    var(--liquid-highlight),
+    var(--liquid-rim) 14%,
+    transparent 28%,
+    var(--liquid-rim) 48%,
+    var(--liquid-highlight) 56%,
+    transparent 72%,
+    var(--liquid-highlight)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.site .hero-portrait.liquid-glass,
+.site .flower-action.liquid-glass,
+.site .flower-trigger.liquid-glass,
+.site .portfolio-nav.is-pinned.liquid-glass {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text);
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.flower-action.liquid-glass {
+  position: relative;
+}
+.flower-action.liquid-glass > svg:not(.liquid-glass-defs),
+.flower-trigger.liquid-glass > .flower-bars {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 1px var(--surface))
+    drop-shadow(0 1px 1px var(--surface));
+}
+.site .portfolio-nav.is-pinned.liquid-glass > .brand,
+.site .portfolio-nav.is-pinned.liquid-glass > .nav-actions {
+  position: relative;
+  z-index: 1;
+}
+.site .portfolio-nav.is-pinned.liquid-glass > .nav-links {
+  z-index: 1;
+}
+.site .portfolio-nav.is-pinned.liquid-glass > .liquid-glass-layer {
+  --liquid-softness: 6px;
+  -webkit-backdrop-filter: blur(6px) saturate(160%);
+  box-shadow:
+    inset 0 1px 1px var(--liquid-highlight),
+    inset 1px 0 2px var(--liquid-rim),
+    inset -1px -1px 1px var(--liquid-rim),
+    inset 0 -4px 7px -4px var(--liquid-inner-shade),
+    0 8px 26px -5px var(--liquid-shade);
+}
+.site .portfolio-nav.is-pinned.liquid-glass .segmented-control {
+  background: color-mix(in srgb, var(--text) 7%, transparent);
+}
+.liquid-button {
+  position: relative;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+.liquid-button-content {
+  position: relative;
+  z-index: 1;
+}
+.liquid-button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+.liquid-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .site .liquid-glass-layer {
+    background: var(--surface);
+  }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .site .liquid-glass-layer,
+  .site .portfolio-nav.is-pinned.liquid-glass > .liquid-glass-layer {
+    background: var(--surface);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .site .liquid-glass-edge {
+    display: none;
+  }
+}
+@media (prefers-contrast: more) {
+  .site .liquid-glass-layer {
+    border-color: var(--text);
+  }
+}
+
+/* One aligned crop, without a bright stroke running down the photo's side. */
+.site .hero-portrait.liquid-glass {
+  border: 0;
+}
+.site .hero-portrait.liquid-glass > .liquid-glass-layer {
+  border: 0;
+  /* Blend the refracted backdrop into the live scene at the sides. A hard
+     SVG sampling boundary otherwise reads as a dark vertical cut line. */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 24px,
+    #000 calc(100% - 24px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 24px,
+    #000 calc(100% - 24px),
+    transparent
+  );
+  box-shadow:
+    inset 0 1px 2px #ffffff30,
+    inset 0 -1px 3px var(--liquid-glow);
+}
+.site .hero-portrait.liquid-glass > img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  border-radius: inherit;
+}
+.site .hero-portrait.liquid-glass > .liquid-glass-edge {
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at 16% 0%,
+    var(--liquid-highlight),
+    transparent 55%
+  );
+  opacity: 0.35;
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .site .hero-portrait.liquid-glass > .liquid-glass-layer {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+@media (prefers-contrast: more) {
+  .site .hero-portrait.liquid-glass > .liquid-glass-layer {
+    border: 1px solid var(--text);
+  }
+}

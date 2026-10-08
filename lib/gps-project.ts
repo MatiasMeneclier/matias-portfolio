@@ -1,0 +1,59 @@
+import type { Entry } from "../types/content.ts";
+
+export const gpsProject: Entry = {
+  id: "20000000-0000-4000-8000-000000000004",
+  sort_order: 3,
+  is_visible: true,
+  data: {
+    title: "Navegador GPS con brújula solar",
+    title_en: "GPS navigator with solar compass",
+    slug: "navegador-gps-brujula-solar",
+    category: "Sistemas embebidos · Navegación",
+    category_en: "Embedded systems · Navigation",
+    year: "2026",
+    date: "2026-07-02",
+    status: "En desarrollo",
+    featured: false,
+    is_demo: false,
+    cover: "/projects/gps-brujula-solar.svg",
+    screenshots: [],
+    video: "",
+    github: "",
+    demo: "",
+    technologies: [
+      "Arduino Mega 2560",
+      "C++",
+      "GPS NEO-6M",
+      "MPU-6500",
+      "OLED",
+    ],
+    short_description:
+      "Sistema embebido que calcula distancia y rumbo a un destino, con orientación calibrada mediante el Sol y una brújula gráfica en pantalla OLED.",
+    short_description_en:
+      "An embedded system that calculates distance and bearing to a destination, with Sun-based orientation calibration and a graphical compass on an OLED display.",
+    long_description:
+      "Proyecto académico desarrollado junto a Sebastian Nemi para Arquitectura de Computadoras en la Facultad de Ingeniería del Ejército. Integra un Arduino Mega 2560, un receptor GPS, un sensor inercial y una pantalla OLED para obtener la ubicación, elegir destinos y mostrar indicaciones de orientación. El informe técnico documenta la arquitectura, los protocolos de comunicación y el funcionamiento del código.",
+    long_description_en:
+      "An academic project developed with Sebastian Nemi for Computer Architecture at the Facultad de Ingeniería del Ejército. It integrates an Arduino Mega 2560, a GPS receiver, an inertial sensor and an OLED display to obtain location, select destinations and display orientation guidance. The technical report documents the architecture, communication protocols and code behavior.",
+    problem:
+      "Conocer la ubicación y el rumbo hacia un destino no indica hacia dónde apunta el dispositivo cuando está detenido. El proyecto aborda ambas necesidades: calcular distancia y dirección, y comparar ese rumbo con la orientación actual para guiar al usuario.",
+    problem_en:
+      "Knowing location and the bearing to a destination does not reveal which way a stationary device is pointing. The project addresses both needs: calculate distance and direction, then compare the desired bearing with the current orientation to guide the user.",
+    solution:
+      "El GPS proporciona posición, fecha y hora UTC. Durante la calibración, el usuario orienta el dispositivo hacia el Sol y el programa calcula su azimut para establecer una referencia geográfica. El giroscopio registra las rotaciones posteriores y la OLED muestra una flecha hacia el destino, además de coordenadas, distancia, rumbo y fecha/hora.",
+    solution_en:
+      "GPS provides position, date and UTC time. During calibration, the user aligns the device with the Sun and the program calculates its azimuth to establish a geographic reference. The gyroscope tracks subsequent rotations and the OLED shows a destination arrow, along with coordinates, distance, bearing and date/time.",
+    architecture:
+      "Arduino Mega 2560 con ATmega2560. El GPS u-blox NEO-6M se comunica por UART y sus tramas NMEA se procesan con TinyGPSPlus. El MPU-6500 y la OLED SSD1306 de 128 × 64 comparten el bus I²C. Una máquina de cuatro estados organiza la adquisición GPS, la calibración solar, la selección de destino y la navegación. El código en C++ calcula el azimut solar e integra la velocidad angular usando el tiempo real entre lecturas.",
+    architecture_en:
+      "Arduino Mega 2560 with an ATmega2560. The u-blox NEO-6M GPS communicates through UART, with NMEA messages parsed by TinyGPSPlus. The MPU-6500 and 128 × 64 SSD1306 OLED share the I²C bus. A four-state machine organizes GPS acquisition, solar calibration, destination selection and navigation. C++ code calculates solar azimuth and integrates angular velocity using the actual time between readings.",
+    challenges:
+      "Atender la recepción continua del GPS y las lecturas del giroscopio sin bloquear la navegación, manejar diferencias angulares circulares y presentar información en una pantalla pequeña. La orientación depende de una calibración solar precisa y del uso nivelado del dispositivo; la integración del giroscopio acumula deriva y puede requerir recalibración.",
+    challenges_en:
+      "Handle continuous GPS reception and gyroscope readings without blocking navigation, manage circular angle differences and present information on a small display. Orientation depends on accurate solar calibration and keeping the device level; gyroscope integration accumulates drift and may require recalibration.",
+    results:
+      "Prototipo académico documentado con selección de destinos, cálculo de distancia y rumbo, cuatro vistas de navegación y brújula gráfica. El trabajo conecta programación de microcontroladores, comunicación con periféricos y cálculos geográficos y astronómicos. La fusión de sensores y la recalibración periódica se plantean como mejoras futuras.",
+    results_en:
+      "A documented academic prototype with destination selection, distance and bearing calculations, four navigation views and a graphical compass. The work combines microcontroller programming, peripheral communication and geographic and astronomical calculations. Sensor fusion and periodic recalibration are proposed as future improvements.",
+  },
+};

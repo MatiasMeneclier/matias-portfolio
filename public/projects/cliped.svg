@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Cliped — seguimiento de jugadores</title>
+  <desc>Ilustración conceptual de una trayectoria sobre una cancha de fútbol. No es una captura de un análisis real.</desc>
+  <defs>
+    <linearGradient id="bg" x1="100" y1="30" x2="1100" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#192e29"/><stop offset="1" stop-color="#071b18"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#b9ed98" stop-opacity=".13"/><stop offset="1" stop-color="#b9ed98" stop-opacity="0"/></radialGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v750H0z"/>
+  <ellipse cx="720" cy="290" rx="580" ry="430" fill="url(#light)"/>
+  <g stroke="#b3d1b7" stroke-opacity=".25" stroke-width="2">
+    <rect x="150" y="155" width="900" height="440" rx="10"/>
+    <path d="M600 155v440M150 260h130v230H150m0-160h50v90h-50m900-160H920v230h130m0-160h-50v90h50"/>
+    <circle cx="600" cy="375" r="77"/>
+    <path d="M280 310a82 82 0 0 1 0 130m640-130a82 82 0 0 0 0 130"/>
+  </g>
+  <g fill="#d4e9d7" fill-opacity=".3">
+    <circle cx="346" cy="242" r="7"/><circle cx="255" cy="370" r="7"/><circle cx="405" cy="489" r="7"/><circle cx="795" cy="245" r="7"/><circle cx="884" cy="485" r="7"/><circle cx="960" cy="349" r="7"/>
+  </g>
+  <path d="M320 455C393 451 392 313 493 327S581 473 659 427 735 302 817 339" stroke="#c8f69e" stroke-opacity=".22" stroke-width="14" stroke-linecap="round"/>
+  <path d="M320 455C393 451 392 313 493 327S581 473 659 427 735 302 817 339" stroke="#c8f69e" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 9"/>
+  <g stroke="#d5ffae" stroke-width="3" stroke-linecap="round">
+    <path d="M786 316v-17h17m28 0h17v17m0 46v17h-17m-28 0h-17v-17"/>
+    <circle cx="817" cy="339" r="10" fill="#d5ffae"/>
+    <circle cx="817" cy="339" r="24" stroke-opacity=".3"/>
+  </g>
+  <text x="150" y="108" fill="#b6d0bd" font-family="Arial, sans-serif" font-size="16" letter-spacing="5">PLAYER TRACKING</text>
+  <text x="150" y="663" fill="#c8f69e" font-family="Arial, sans-serif" font-size="16" letter-spacing="3">VIDEO / VISION / MOTION</text>
+</svg>
